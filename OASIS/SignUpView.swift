@@ -1,13 +1,13 @@
 //
-//  loginPage.swift
+//  SignUpView.swift
 //  OASIS
 //
-//  Created by 동현 on 2022/04/28.
+//  Created by 동현 on 2022/05/02.
 //
 
 import SwiftUI
 
-struct loginPage: View{
+struct SignUpView: View{
     
     @State var idtextField = ""
     @State var passtextField = ""
@@ -53,11 +53,6 @@ struct loginPage: View{
                 .shadow(color: Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)), radius: 13, x: 0, y: 0)
                 
                 
-                Text("비밀번호 또는 아이디를 잊어버리셨나요?")
-                .font(.system(size: 11))
-                .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
-                
-            }
                 
             Text("Login")
                 .font(.system(size: 13))
@@ -80,13 +75,12 @@ struct loginPage: View{
                     .padding(.trailing, 0)
                     .padding(.top, 90)
                     .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
-                NavigationLink(destination: SignUpView()){
+                
                 Text("회원가입")
                     .font(.system(size: 11))
                     .padding(.leading, 0)
                     .padding(.top, 90)
                     .foregroundColor(Color.orange)
-            }
             }
                 
                 
@@ -96,10 +90,10 @@ struct loginPage: View{
     
 }
 
-
-struct loginPage_Previews:
+}
+struct SingUpView_Previews:
     PreviewProvider{
     static var previews: some View{
-        loginPage()
+        SignUpView()
     }
 }
