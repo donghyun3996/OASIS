@@ -14,6 +14,7 @@ struct loginPage: View{
     
     var body: some View
     {
+        NavigationView{
         VStack{
             Image("OASIS2")
                 .frame(width: 120, height: 100)
@@ -36,7 +37,7 @@ struct loginPage: View{
             VStack(alignment: .trailing){
                 
             TextField("   아이디를 입력하세요", text: $idtextField)
-                .frame(width: 289, height: 51)
+                .frame(width: 300, height: 51)
                 .background(Color.white)
                 .cornerRadius(14)
                 .shadow(color: Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)), radius: 13, x: 0, y: 0)
@@ -47,14 +48,14 @@ struct loginPage: View{
             
                 
             TextField("   비밀번호를 입력하세요", text: $passtextField)
-                .frame(width: 289, height: 51)
+                .frame(width: 300, height: 51)
                 .background(Color.white)
                 .cornerRadius(14)
                 .shadow(color: Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)), radius: 13, x: 0, y: 0)
                 
                 
                 Text("비밀번호 또는 아이디를 잊어버리셨나요?")
-                .font(.system(size: 11))
+                .font(.system(size: 9))
                 .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
                 
             }
@@ -63,7 +64,7 @@ struct loginPage: View{
                 .font(.system(size: 13))
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
-                .frame(width: 289, height: 51)
+                .frame(width: 300, height: 51)
                 .background(LinearGradient(gradient: Gradient(
                     colors: [
                         .init(uiColor: UIColor(red: 204.0/255.0, green: 225.0/255.0, blue: 244.0/255.0, alpha: 1)),
@@ -80,21 +81,32 @@ struct loginPage: View{
                     .padding(.trailing, 0)
                     .padding(.top, 90)
                     .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
+                
                 NavigationLink(destination: SignUpView()){
                 Text("회원가입")
                     .font(.system(size: 11))
                     .padding(.leading, 0)
                     .padding(.top, 90)
                     .foregroundColor(Color.orange)
+                    
             }
+                
             }
-                
-                
-                
-        }.edgesIgnoringSafeArea(.all)
+        }
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("", displayMode: .automatic)
+        .navigationBarHidden(true)
+
+        
+        }
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("", displayMode: .automatic)
+            .navigationBarHidden(true)
+        
+    }
     }
     
-}
+
 
 
 struct loginPage_Previews:

@@ -14,6 +14,7 @@ struct SignUpView: View{
     
     var body: some View
     {
+        NavigationView{
         VStack{
             Image("OASIS2")
                 .frame(width: 120, height: 100)
@@ -21,7 +22,7 @@ struct SignUpView: View{
                 .clipped()
             
             
-            Text("LOGIN")
+            Text("SIGN UP")
                 .font(.system(size: 25))
                 .foregroundColor(Color(uiColor: UIColor.gray))
                 .fontWeight(.bold)
@@ -29,36 +30,44 @@ struct SignUpView: View{
                 .padding(.bottom, 10)
                 
             
-            Text("앱을 사용하기위해선 로그인이 필요합니다.")
+            Text("오아시스에 가입하여 더 깊은 사랑을 나눠보세요.")
                 .font(.system(size: 11))
                 .foregroundColor(Color(uiColor:UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
             
             VStack(alignment: .trailing){
                 
             TextField("   아이디를 입력하세요", text: $idtextField)
-                .frame(width: 289, height: 51)
+                .frame(width: 300, height: 51)
                 .background(Color.white)
                 .cornerRadius(14)
                 .shadow(color: Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)), radius: 13, x: 0, y: 0)
                 .padding(.top, 35)
-                .padding(.bottom, 10)
-
                 
+
+                Text("1~8글자(영어)내로 작성해주세요.")
+                    .font(.system(size: 9))
+                    .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
+                    .padding(.bottom, 10)
             
                 
             TextField("   비밀번호를 입력하세요", text: $passtextField)
-                .frame(width: 289, height: 51)
+                .frame(width: 300, height: 51)
                 .background(Color.white)
                 .cornerRadius(14)
                 .shadow(color: Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)), radius: 13, x: 0, y: 0)
                 
-                
-                
+
+                Text("특수문자 제외, 영어 숫자 조합 8자 이상으로 작성해주세요.")
+                .font(.system(size: 9))
+                .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
+                }
+         
+            NavigationLink(destination: SignUpView2()){
             Text("Login")
                 .font(.system(size: 13))
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
-                .frame(width: 289, height: 51)
+                .frame(width: 300, height: 51)
                 .background(LinearGradient(gradient: Gradient(
                     colors: [
                         .init(uiColor: UIColor(red: 204.0/255.0, green: 225.0/255.0, blue: 244.0/255.0, alpha: 1)),
@@ -68,29 +77,44 @@ struct SignUpView: View{
                     endPoint: .bottomTrailing))
                 .cornerRadius(27)
                 .padding(.top, 58)
-                
+            }
+            
+            
             HStack{
-                Text("계정이 없으신가요?")
+                Text("이미 계정이 있으신가요?")
                     .font(.system(size: 11))
                     .padding(.trailing, 0)
                     .padding(.top, 90)
                     .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
                 
-                Text("회원가입")
+                NavigationLink(destination: loginPage()){
+                Text("로그인")
                     .font(.system(size: 11))
                     .padding(.leading, 0)
                     .padding(.top, 90)
                     .foregroundColor(Color.orange)
+                    
+                }
+                
             }
                 
                 
                 
-        }.edgesIgnoringSafeArea(.all)
+        }
+        
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("", displayMode: .automatic)
+            .navigationBarHidden(true)
+        
+        }
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("", displayMode: .automatic)
+            .navigationBarHidden(true)
+        
     }
-    
 }
 
-}
+
 struct SingUpView_Previews:
     PreviewProvider{
     static var previews: some View{

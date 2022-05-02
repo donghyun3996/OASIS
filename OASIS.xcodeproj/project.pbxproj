@@ -13,6 +13,7 @@
 		C9F67412281A85390063070F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9F67411281A85390063070F /* Launch Screen.storyboard */; };
 		C9F67416281A8D5A0063070F /* loginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F67415281A8D5A0063070F /* loginPage.swift */; };
 		C9F67438281FFD910063070F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F67437281FFD910063070F /* SignUpView.swift */; };
+		C9F6743A28201D450063070F /* SignUpView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F6743928201D450063070F /* SignUpView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		C9F67411281A85390063070F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		C9F67415281A8D5A0063070F /* loginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginPage.swift; sourceTree = "<group>"; };
 		C9F67437281FFD910063070F /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		C9F6743928201D450063070F /* SignUpView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				C9F67403281A851B0063070F /* OASISApp.swift */,
 				C9F67415281A8D5A0063070F /* loginPage.swift */,
 				C9F67437281FFD910063070F /* SignUpView.swift */,
+				C9F6743928201D450063070F /* SignUpView2.swift */,
 				C9F67411281A85390063070F /* Launch Screen.storyboard */,
 				C9F67407281A851D0063070F /* Assets.xcassets */,
 				C9F67409281A851D0063070F /* Preview Content */,
@@ -147,6 +150,7 @@
 				C9F67416281A8D5A0063070F /* loginPage.swift in Sources */,
 				C9F67438281FFD910063070F /* SignUpView.swift in Sources */,
 				C9F67404281A851B0063070F /* OASISApp.swift in Sources */,
+				C9F6743A28201D450063070F /* SignUpView2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
