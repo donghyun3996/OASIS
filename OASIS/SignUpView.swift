@@ -36,12 +36,12 @@ struct SignUpView: View{
             
             VStack(alignment: .trailing){
                 
-            TextField("   아이디를 입력하세요", text: $idtextField)
+            TextField("   아이디를 입력해주세요.", text: $idtextField)
                 .frame(width: 300, height: 51)
                 .background(Color.white)
                 .cornerRadius(14)
                 .shadow(color: Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)), radius: 13, x: 0, y: 0)
-                .padding(.top, 35)
+                .padding(.top, 30)
                 
 
                 Text("1~8글자(영어)내로 작성해주세요.")
@@ -50,7 +50,7 @@ struct SignUpView: View{
                     .padding(.bottom, 10)
             
                 
-            TextField("   비밀번호를 입력하세요", text: $passtextField)
+            TextField("   비밀번호를 입력해주세요.", text: $passtextField)
                 .frame(width: 300, height: 51)
                 .background(Color.white)
                 .cornerRadius(14)
@@ -63,7 +63,7 @@ struct SignUpView: View{
                 }
          
             NavigationLink(destination: SignUpView2()){
-            Text("Login")
+            Text("다음")
                 .font(.system(size: 13))
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
@@ -76,7 +76,7 @@ struct SignUpView: View{
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing))
                 .cornerRadius(27)
-                .padding(.top, 58)
+                .padding(.top, 53)
             }
             
             
@@ -107,7 +107,6 @@ struct SignUpView: View{
             .navigationBarHidden(true)
         
         }
-        .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("", displayMode: .automatic)
             .navigationBarHidden(true)
         
