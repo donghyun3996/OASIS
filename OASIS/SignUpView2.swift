@@ -62,7 +62,7 @@ struct SignUpView2: View{
                 }
          
             
-            NavigationLink(destination: SignUpView2()){
+            NavigationLink(destination: SignUpView3()){
             Text("다음")
                 .font(.system(size: 13))
                 .fontWeight(.bold)

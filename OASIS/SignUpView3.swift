@@ -1,13 +1,13 @@
 //
-//  loginPage.swift
+//  SignUpView.swift
 //  OASIS
 //
-//  Created by 동현 on 2022/04/28.
+//  Created by 동현 on 2022/05/02.
 //
 
 import SwiftUI
 
-struct loginPage: View{
+struct SignUpView3: View{
     
     @State var idtextField = ""
     @State var passtextField = ""
@@ -22,7 +22,7 @@ struct loginPage: View{
                 .clipped()
             
             
-            Text("LOGIN")
+            Text("SIGN UP")
                 .font(.system(size: 25))
                 .foregroundColor(Color(uiColor: UIColor.gray))
                 .fontWeight(.bold)
@@ -30,37 +30,34 @@ struct loginPage: View{
                 .padding(.bottom, 10)
                 
             
-            Text("앱을 사용하기위해선 로그인이 필요합니다.")
+            Text("오아시스에 가입하여 더 깊은 사랑을 나눠보세요.")
                 .font(.system(size: 11))
                 .foregroundColor(Color(uiColor:UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
             
             VStack(alignment: .trailing){
                 
-            TextField("   아이디를 입력해주세요.", text: $idtextField)
+            TextField("", text: $idtextField)
                 .frame(width: 300, height: 51)
                 .background(Color.white)
                 .cornerRadius(14)
                 .shadow(color: Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)), radius: 13, x: 0, y: 0)
                 .padding(.top, 35)
-                .padding(.bottom, 10)
-
                 
-            
                 
-            TextField("   비밀번호를 입력해주세요.", text: $passtextField)
-                .frame(width: 300, height: 51)
+            Text(" ㅁㅇㄴㄹㅁㅇㄴ")
+                .frame(width: 300, height: 100)
                 .background(Color.white)
                 .cornerRadius(14)
                 .shadow(color: Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)), radius: 13, x: 0, y: 0)
                 
-                NavigationLink(destination: changePasswardView()){
-                Text("비밀번호 또는 아이디를 잊어버리셨나요?")
+
+                Text(" ")
                 .font(.system(size: 9))
-                .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
                 }
-            }
-                
-            Text("Login")
+         
+            
+            NavigationLink(destination: loginPage()){
+            Text("회원가입")
                 .font(.system(size: 13))
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
@@ -73,45 +70,44 @@ struct loginPage: View{
                     startPoint: .topLeading,
                     endPoint: .bottomTrailing))
                 .cornerRadius(27)
-                .padding(.top, 58)
-                
+                .padding(.top, 28)
+            }
+            
+            
+            
             HStack{
-                Text("계정이 없으신가요?")
+                Text("이미 계정이 있으신가요?")
                     .font(.system(size: 11))
                     .padding(.trailing, 0)
-                    .padding(.top, 90)
+                    .padding(.top, 65)
                     .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
                 
-                NavigationLink(destination: SignUpView()){
-                Text("회원가입")
+                NavigationLink(destination: loginPage()){
+                Text("로그인")
                     .font(.system(size: 11))
                     .padding(.leading, 0)
-                    .padding(.top, 90)
+                    .padding(.top, 65)
                     .foregroundColor(Color.orange)
-                    
+                }
+                }
             }
-                
-            }
-        }
-        .edgesIgnoringSafeArea(.all)
-        .navigationBarTitle("", displayMode: .automatic)
-        .navigationBarHidden(true)
-
-        
+            .edgesIgnoringSafeArea(.all)
+            .navigationBarTitle("", displayMode: .automatic)
+                .navigationBarHidden(true)
+            
         }
         .edgesIgnoringSafeArea(.all)
         .navigationBarTitle("", displayMode: .automatic)
             .navigationBarHidden(true)
         
+        
     }
-    }
-    
+}
 
 
-
-struct loginPage_Previews:
+struct SingUpView3_Previews:
     PreviewProvider{
     static var previews: some View{
-        loginPage()
+        SignUpView3()
     }
 }
