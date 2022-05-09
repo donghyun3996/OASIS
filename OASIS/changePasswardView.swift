@@ -22,7 +22,7 @@ struct changePasswardView: View{
                 .clipped()
             
             
-            Text("LOGIN")
+            Text("비밀번호 변경")
                 .font(.system(size: 25))
                 .foregroundColor(Color(uiColor: UIColor.gray))
                 .fontWeight(.bold)
@@ -30,7 +30,7 @@ struct changePasswardView: View{
                 .padding(.bottom, 10)
                 
             
-            Text("앱을 사용하기위해선 로그인이 필요합니다.")
+            Text("비밀번호를 변경하기 위해선 닉네임이 필요해요!")
                 .font(.system(size: 11))
                 .foregroundColor(Color(uiColor:UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
             
@@ -44,9 +44,6 @@ struct changePasswardView: View{
                 .padding(.top, 35)
                 .padding(.bottom, 10)
                 
-                Text("비밀번호 또는 아이디를 잊어버리셨나요?")
-                .font(.system(size: 9))
-                .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
                 
             }
                 
@@ -65,7 +62,10 @@ struct changePasswardView: View{
                 .cornerRadius(27)
                 .padding(.top, 58)
                 
-          
+            Text("아이디를 잊으셨나요?")
+                .font(.system(size: 11))
+                .foregroundColor(Color(uiColor:UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
+            
             
             }
         .edgesIgnoringSafeArea(.all)
