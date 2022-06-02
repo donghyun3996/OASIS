@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct changePasswardView: View{
+struct changePasswardView2: View{
     
     @State var idtextField = ""
     @State var passtextField = ""
@@ -33,30 +33,24 @@ struct changePasswardView: View{
                 .padding(.bottom, 10)
                 
             
-            Text("비밀번호를 변경하기 위해선 닉네임이 필요해요!")
+            Text("비밀번호를 변경하기 위해선 이메일이 필요해요!")
                 .font(.system(size: 11))
                 .foregroundColor(Color(uiColor:UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
             
             VStack(alignment: .trailing){
                 
-            TextField("   아이디를 입력해주세요.", text: $idtextField)
+            TextField("   이메일를 입력해주세요.", text: $idtextField)
                 .frame(width: 300, height: 51)
                 .background(Color.white)
                 .cornerRadius(14)
                 .shadow(color: Color(uiColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)), radius: 13, x: 0, y: 0)
                 .padding(.top, 35)
-                .padding(.bottom, 0)
+                .padding(.bottom, 10)
                 
                 
-            
-            
-            
-            Text("1~8글자(한국어)로 입력해 주세요.")
-                .font(.system(size: 11))
-                .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
             }
-            NavigationLink(destination: changePasswardView2()){
-            Text("다음")
+                
+            Text("Login")
                 .font(.system(size: 13))
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
@@ -70,7 +64,7 @@ struct changePasswardView: View{
                     endPoint: .bottomTrailing))
                 .cornerRadius(27)
                 .padding(.top, 58)
-            }
+                
             Text("아이디를 잊으셨나요?")
                 .font(.system(size: 11))
                 .foregroundColor(Color(uiColor:UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
@@ -93,9 +87,9 @@ struct changePasswardView: View{
 
 
 
-struct changePasswardView_Previews:
+struct changePasswardView2_Previews:
     PreviewProvider{
     static var previews: some View{
-        changePasswardView()
+        changePasswardView2()
     }
 }
