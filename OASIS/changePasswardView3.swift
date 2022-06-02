@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct changePasswardView: View{
+struct changePasswardView3: View{
     
     @State var idtextField = ""
     @State var passtextField = ""
@@ -39,7 +39,7 @@ struct changePasswardView: View{
             
             VStack(alignment: .trailing){
                 
-            TextField("   아이디를 입력해주세요.", text: $idtextField)
+            TextField("   새로운 비밀번호를 입력해주세요.", text: $idtextField)
                 .frame(width: 300, height: 51)
                 .background(Color.white)
                 .cornerRadius(14)
@@ -51,12 +51,12 @@ struct changePasswardView: View{
             
             
             
-            Text("1~8글자(한국어)로 입력해 주세요.")
+            Text("특수문자 제외, 영어 숫자 조합 8자 이상으로 작성해주세요.")
                 .font(.system(size: 11))
                 .foregroundColor(Color(uiColor: UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
             }
             NavigationLink(destination: changePasswardView2()){
-            Text("다음")
+            Text("비밀번호 변경")
                 .font(.system(size: 13))
                 .fontWeight(.bold)
                 .foregroundColor(Color.white)
@@ -72,11 +72,6 @@ struct changePasswardView: View{
                 .cornerRadius(27)
                 .padding(.top, 58)
             }
-            Text("아이디를 잊으셨나요?")
-                .font(.system(size: 11))
-                .foregroundColor(Color(uiColor:UIColor(red: 0.583, green: 0.583, blue: 0.583, alpha: 1)))
-            
-            
             }
         .edgesIgnoringSafeArea(.all)
         .edgesIgnoringSafeArea(.all)
@@ -94,9 +89,9 @@ struct changePasswardView: View{
 
 
 
-struct changePasswardView_Previews:
+struct changePasswardView3_Previews:
     PreviewProvider{
     static var previews: some View{
-        changePasswardView()
+        changePasswardView3()
     }
 }
