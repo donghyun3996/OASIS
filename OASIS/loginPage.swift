@@ -9,6 +9,8 @@ import SwiftUI
 
 struct loginPage: View{
     
+    
+    
     @State var idtextField = ""
     @State var passtextField = ""
     

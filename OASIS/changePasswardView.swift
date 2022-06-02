@@ -14,8 +14,11 @@ struct changePasswardView: View{
     
     var body: some View
     {
+        
         NavigationView{
+            
         VStack{
+            
             Image("OASIS2")
                 .frame(width: 120, height: 100)
                 .aspectRatio(contentMode: .fit)
@@ -69,8 +72,14 @@ struct changePasswardView: View{
             
             }
         .edgesIgnoringSafeArea(.all)
-        }
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("", displayMode: .automatic)
+            .navigationBarHidden(true)
         
+        }
+        .edgesIgnoringSafeArea(.all)
+        .navigationBarTitle("", displayMode: .automatic)
+            .navigationBarHidden(true)
         
     }
     }
