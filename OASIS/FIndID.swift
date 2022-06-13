@@ -49,8 +49,9 @@ struct FindID: View{
                 
                 
             
-            
-            
+           
+                
+                
                         }
             NavigationLink(destination: changePasswardView2()){
             Text("아이디 받기")
