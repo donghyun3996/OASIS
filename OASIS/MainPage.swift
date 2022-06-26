@@ -9,7 +9,12 @@ import SwiftUI
 
 struct MainPage: View {
     var body: some View {
-        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Hello, world!@*/Text("Hello, world!")/*@END_MENU_TOKEN@*/
+    
+        HStack{
+            Text("노혁 노혁")
+        
+        }
+    
     }
 }
 
@@ -17,4 +22,7 @@ struct MainPage_Previews: PreviewProvider {
     static var previews: some View {
         MainPage()
     }
+     
 }
+ 
+  
