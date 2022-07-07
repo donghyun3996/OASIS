@@ -12,8 +12,7 @@ struct MainPage: View {
     
         HStack{
             Text("노혁 노혁")
-            Text("노혁 노혁")
-            Text("노혁 노혁")
+            
         
         }
        
